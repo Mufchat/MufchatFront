@@ -19,9 +19,15 @@ var onlineUsers = new Vue({
     el: '#online-users',
     data: {
         onlineUsers: onlineUsersList
-    },
+    }
 });
 
 var signOut = new Vue({
-    el: '.fa-sign-out',
+    el: '.panel-list',
+    methods: {
+        logout: function () {
+            window.location = "/logout"
+        }
+    }
 });
+

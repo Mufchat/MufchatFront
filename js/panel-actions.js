@@ -2,6 +2,7 @@ $('#theme-switcher').change(function() {
     $('body').toggleClass("light");
 });
 
+
 $('#personalize-button').click(function() {
     $('#personalize-content').toggleClass('hidden');
 });

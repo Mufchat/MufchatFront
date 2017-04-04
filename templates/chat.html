@@ -1,6 +1,6 @@
 <!-- macholl wciaga rogale -->
 <!doctype html>
-<html xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>omegaChat</title>
@@ -10,15 +10,16 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../lib/vue/vue.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 </head>
 <body>
-
+<div id="app">
 <!-- PANEL -->
 <div class="panel">
     <img src="../resources/img/logo.png" alt="cosmo logo" class="logo">
-    <div id="greeting">
+    <div id="greeting" v-bind:class="{light: true}">
         <div>
             Witaj, <span class="outstand">{{ nickname }}</span>!
         </div>
@@ -50,7 +51,7 @@
                         <div class="slider"></div>
                     </label>
                 </li>
-                <li class='red'><i class="fa fa-sign-out" aria-hidden="true"></i>Wyloguj</li>
+                <li class='red' v-on:click="logout"><i class="fa fa-sign-out" aria-hidden="true"></i><a>Wyloguj</a></li>
             </ul>
         </div>
         <div class="list">
@@ -76,7 +77,6 @@
                 <li><i class="fa fa-picture-o" aria-hidden="true"></i>usuń wiadomości</li>
                 <li>
                     <i class="fa fa-picture-o" aria-hidden="true"></i>
-                    motd
                     <label class="switch">
                         <input type="checkbox" checked>
                         <div class="slider"></div>
@@ -103,9 +103,8 @@
         <input type="submit" id="chat-input-submit" value="Wyślij">
     </form>
 </div>
-
+</div>
 <script src="../js/chat.js"></script>
 <script src="../js/panel-actions.js"></script>
-
 </body>
 </html>
