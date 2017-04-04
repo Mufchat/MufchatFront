@@ -86,22 +86,22 @@ sup {
     color: #09cdfd;
 }
 
-#online {
+#online-users {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
 
-#online li {
+#online-users li {
     padding-left: 30px;
 }
 
-#online li:after,
+#online-users li:after,
 .no-arrow:after {
     display: none;
 }
 
-#online img {
+#online-users img {
     height: 25px;
     position: absolute;
     top: 5px;
