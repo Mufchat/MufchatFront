@@ -31,7 +31,7 @@
                 <li id="personalize-button"><i class="fa fa-picture-o" aria-hidden="true"></i>Personalizacja</li>
                 
                 <!-- PERSONALIZATION MENU -->
-                <div id="personalize-content">
+                <div id="personalize-content" class="hidden">
                     <span class="list-title">Zmiana avatara</span>
                     <img src="https://api.adorable.io/avatars/285/macholl.png">
                     <div id="personalize-avatar-menu">
@@ -86,9 +86,23 @@
             </ul>
         </div>
     </div>
-
+    <div class="panel-footer">Copyright 2017 @ mufoll.com</div>
 </div>
 
+<div id="chat-window">
+    
+</div>
+    
+<div id="chat-panel">
+    
+    <form>
+        <button class="chat-input-emoticons" onclick="return false;">
+            :)
+        </button>
+        <input type="text" id="chat-input" autocomplete="off">
+        <input type="submit" id="chat-input-submit" value="Wyślij">
+    </form>
+</div>
 
 <script src="../js/chat.js"></script>
 <script src="../js/panel-actions.js"></script>
