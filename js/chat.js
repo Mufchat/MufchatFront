@@ -21,3 +21,7 @@ var onlineUsers = new Vue({
         onlineUsers: onlineUsersList
     },
 });
+
+var signOut = new Vue({
+    el: '.fa-sign-out',
+});
