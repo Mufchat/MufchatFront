@@ -50,7 +50,6 @@ ul > li {
 }
 
 ul > li:after {
-    content: '>';
     display: inline-block;
     position: absolute;
     right: 45px;
@@ -67,6 +66,7 @@ ul > li > i {
 
 .list-title {
     color: #4a5769;
+        display: block;
 }
 
 .red {
@@ -161,4 +161,75 @@ input:checked + .slider:before {
   -webkit-transform: translateX(17px);
   -ms-transform: translateX(17px);
   transform: translateX(17px);
+}
+
+.light {
+    background-color: #dbdbdb;
+}
+
+#personalize-content {
+    position: relative;
+    margin-left: 26px;
+    border-top: 1px solid rgba(255, 255, 255, 0.13);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+    padding: 5px 0;
+}
+
+#personalize-content img {
+    width: 50px;
+    display: block;
+    padding: 5px 0;
+}
+
+#send-file {
+    padding: 3px 30px;
+}
+
+.button-main {
+    border: none;
+    background: none;
+    border: 1px solid #09cdfd;
+    color: #09cdfd;
+    transition: 0.2s all ease-in-out;
+}
+
+.button-main:hover {
+    background-color: #09cdfd;
+    color: #111117;
+    cursor: pointer;
+}
+
+#send-file-core {
+    display: none;
+}
+
+#send-link {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: none;
+    color: rgba(255, 255, 255, 0.34);
+    padding: 3px 0;
+    margin: 5px 0;
+    width: 177px;
+    text-align: center;
+}
+
+#send-link:focus {
+    outline: none;
+    border-color: #09cdfd;
+}
+
+#personalize-avatar-menu {
+    position: absolute;
+    top: 28px;
+    left: 55px;
+}
+
+#submit-avatar {
+    margin: 5px 0;
+    padding: 6px 0;
+    width: calc(100% - 8px);
+}
+
+.hidden {
+    display: none;
 }

@@ -28,11 +28,24 @@
         <div class="list">
             <span class="list-title">Ustawienia</span>
             <ul>
-                <li><i class="fa fa-picture-o" aria-hidden="true"></i>Personalizacja</li>
+                <li id="personalize-button"><i class="fa fa-picture-o" aria-hidden="true"></i>Personalizacja</li>
+                
+                <!-- PERSONALIZATION MENU -->
+                <div id="personalize-content">
+                    <span class="list-title">Zmiana avatara</span>
+                    <img src="https://api.adorable.io/avatars/285/macholl.png">
+                    <div id="personalize-avatar-menu">
+                        <button id="send-file" class="button-main">Wybierz lokalny plik</button>
+                        <input type="file" id="send-file-core">
+                        <input type="text" id="send-link" placeholder="Lub link do obrazka">
+                    </div>
+                    <input type="submit" class="button-main" id="submit-avatar" value="Ustaw avatar">
+                </div>
+                
                 <li class="no-arrow">
                     <i class="fa fa-book" aria-hidden="true"></i>
                     Tryb ciemny
-                    <label class="switch">
+                    <label class="switch" id="theme-switcher">
                         <input type="checkbox" checked>
                         <div class="slider"></div>
                     </label>
@@ -78,6 +91,7 @@
 
 
 <script src="../js/chat.js"></script>
+<script src="../js/panel-actions.js"></script>
 
 </body>
 </html>
