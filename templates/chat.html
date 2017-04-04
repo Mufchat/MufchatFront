@@ -1,0 +1,68 @@
+<!doctype html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>omegaChat</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../lib/vue/vue.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+</head>
+<body>
+
+<!-- PANEL -->
+<div class="panel">
+    <img src="../resources/img/logo.png" alt="cosmo logo" class="logo">
+    <div id="greeting">
+        <div>
+            Witaj, <span class="outstand">{{ nickname }}</span>!
+        </div>
+    </div>
+
+    <div class="panel-list">
+        <div class="list">
+            <span class="list-title">Ustawienia</span>
+            <ul>
+                <li><i class="fa fa-picture-o" aria-hidden="true"></i>Personalizacja</li>
+                <li><i class="fa fa-book" aria-hidden="true"></i>Przełącz motyw</li>
+                <li class='red'><i class="fa fa-sign-out" aria-hidden="true"></i>Wyloguj</li>
+            </ul>
+        </div>
+        <div class="list">
+            <span class="list-title">POKOJE</span>
+            <ul>
+                <li><i class="fa fa-comments-o" aria-hidden="true"></i>#2et <sup>12</sup></li>
+                <li class='inactive'><i class="fa fa-comments-o" aria-hidden="true"></i>#hydepark</li>
+                <li class='inactive'><i class="fa fa-comments-o" aria-hidden="true"></i>#wejherowo</li>
+            </ul>
+        </div>
+        <div class="list">
+            <span class="list-title">ZALOGOWANI</span>
+            <ul id="online-users">
+                <li v-for="onlineUser in onlineUsers">
+                    <img v-bind:src="onlineUser.avatar">
+                    {{ onlineUser.nickname }}
+                </li>
+            </ul>
+        </div>
+        <div class="list">
+            <span class="list-title">admin panel</span>
+            <ul>
+                <li><i class="fa fa-picture-o" aria-hidden="true"></i>usuń wiadomości</li>
+                <li><i class="fa fa-picture-o" aria-hidden="true"></i>motd</li>
+                <li><i class="fa fa-picture-o" aria-hidden="true"></i>użytkownicy</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="../js/chat.js"></script>
+
+</body>
+</html>

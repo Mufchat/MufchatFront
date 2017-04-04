@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #0a0a0e;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.panel {
+    width: 313px;
+    background-color: #111117;
+    height: 100vh;
+    position: relative;
+}
+
+#greeting {
+    height: 43px;
+    width: 100%;
+    background-color: #0f0f14;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outstand {
+    color: #09cdfd;
+}
+
+.panel-list {
+    padding-left: 45px;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+
+ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+    font-size: 14px;
+    color: #e4ebf4;
+}
+
+ul > li {
+    padding: 9px 0 9px 0;
+    display: block;
+    transition: 0.1s all ease-in-out;
+    opacity: 0.7;
+    position: relative;
+}
+
+ul > li:after {
+    content: '>';
+    display: inline-block;
+    position: absolute;
+    right: 45px;
+}
+
+ul > li:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+ul > li > i {
+    padding-right: 10px;
+}
+
+.list-title {
+    color: #4a5769;
+}
+
+.red {
+    color: #dc6565;
+}
+
+.list {
+    margin-top: 20px;
+}
+
+.inactive {
+    opacity: 0.2;
+}
+
+sup {
+    font-size: 10px;
+    color: #09cdfd;
+}
+
+#online-users {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#online-users li {
+    padding-left: 30px;
+}
+
+#online-users li:after {
+    display: none;
+}
+
+#online-users img {
+    height: 25px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
