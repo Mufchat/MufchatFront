@@ -64,7 +64,7 @@
         </div>
         <div class="list">
             <span class="list-title">ZALOGOWANI</span>
-            <ul id="online-users">
+            <ul id="online-users" v-if="onlineUsers && onlineUsers.length">
                 <li v-for="onlineUser in onlineUsers">
                     <img v-bind:src="onlineUser.avatar">
                     {{ onlineUser.nickname }}
@@ -90,11 +90,9 @@
 </div>
 
 <div id="chat-window">
-    
 </div>
     
 <div id="chat-panel">
-    
     <form>
         <button class="chat-input-emoticons" onclick="return false;">
             :)

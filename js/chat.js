@@ -1,4 +1,9 @@
 // dane testowe
+var my_axios = axios.create({
+    baseURL: 'http://localhost:8080',
+});
+Vue.prototype.$http = my_axios;
+
 var username = 'macholl';
 
 var greeting = new Vue({
@@ -18,7 +23,21 @@ var onlineUsersList = [
 var onlineUsers = new Vue({
     el: '#online-users',
     data: {
-        onlineUsers: onlineUsersList
+        onlineUsers: []
+    },
+    created(){
+        // this.$http.get('/chat/onlineUsers').then(response => this.onlineUsers = response.data) - nie ma security
+        this.onlineUsers = onlineUsersList;
+    }
+});
+
+var chatWindow = new Vue({
+    el: '#chat-window',
+    data: {
+        messages: []
+    },
+    created(){
+        this.$http.get('/chat/messages').then(response => this.messages = response.data)
     }
 });
 
@@ -26,8 +45,9 @@ var signOut = new Vue({
     el: '.panel-list',
     methods: {
         logout: function () {
-            window.location = "/logout"
+            // axios.get('http://localhost:8080/logout') - nie ma security
         }
     }
 });
+
 
