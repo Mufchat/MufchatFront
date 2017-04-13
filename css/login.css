@@ -1,0 +1,89 @@
+body {
+    margin: 0 !important;
+    font-family: 'Roboto', sans-serif;
+    
+    background-image: url('../resources/img/background.png');
+}
+
+a:link,
+a:visited {
+    color: #09cdfd;
+    text-decoration: none;
+    transition: 0.2s all ease-in-out;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+.wrapper {
+    text-align: center;
+    padding-top: 25vh;
+}
+
+form > input {
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    padding: 10px 20px;
+    transition: 0.2s all ease-in-out;
+    color: #e9f3f5;
+    background: none;
+    border: 0;
+}
+
+form > input::placeholder {
+    color: #232325;
+}
+
+form > input[type='text'],
+form > input[type='password'] {
+    border-bottom: 2px solid #232325;
+}
+
+form > input[type='submit'] {
+    margin-top: 40px;
+    width: 243px;
+    border-radius: 5px;
+    border: none;
+    border: 2px solid #09cdfd;
+    color: #09cdfd;
+}
+
+form > input[type="submit"]:hover {
+    background-color: #09cdfd;
+    color: #0a0a0e;
+    cursor: pointer;
+}
+
+form > input[type="text"]:focus,
+form > input[type="password"]:focus {
+    outline: 0;
+    border-color: #09cdfd;
+    color: #09cdfd;
+    font-size: 14px;
+}
+
+.logo {
+    margin-bottom: 40px;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    color: #09cdfd;
+    font-size: 48px;
+}
+
+.description {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #e9f3f5;
+    margin-top: -5px;
+}
+
+.registration-cta {
+    font-size: 12px;
+    color: #e9f3f5;
+    text-transform: uppercase;
+}
