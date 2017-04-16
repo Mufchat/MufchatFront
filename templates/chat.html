@@ -7,19 +7,22 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/light-theme.css" id="light-theme">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../lib/jquery-migrate-3.0.0.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../lib/vue/vue.js"></script>
+    <script src="../lib/jquery.mobile.custom.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta name="theme-color" content="#0a0a0e">
 </head>
 <body>
 <div id="app">
 <!-- PANEL -->
-<div class="panel">
-    <img src="../resources/img/logo.png" alt="cosmo logo" class="logo">
+<div class="panel" id="panel">
+    
     <div id="greeting">
         <div>
             Witaj, <span class="outstand">{{ nickname }}</span>!
@@ -48,7 +51,7 @@
                     <i class="fa fa-book" aria-hidden="true"></i>
                     Tryb ciemny
                     <label class="switch" id="theme-switcher">
-                        <input type="checkbox" checked>
+                        <input type="checkbox" id="theme-checkbox" checked>
                         <div class="slider"></div>
                     </label>
                 </li>
@@ -87,14 +90,14 @@
             </ul>
         </div>
     </div>
-    <div class="panel-footer">Copyright 2017 @ mufoll.com</div>
 </div>
+<span id="mobile-menu-toggle" class="hamburger-icon"></span>
+<nav class="mobile-menu">
+
+<span class="chat-name">#2et</span>
+</nav>
 
 <div id="chat-window">
-    <nav class="mobile-menu">
-        <span class="hamburger-icon"></span>
-        <span class="chat-name"></span>
-    </nav>
     <div class="message-box">
         <img src="https://api.adorable.io/avatars/150/Muflon.png">
         <div class="details">
@@ -133,8 +136,8 @@
         <div class="details">
             <span class="author">Macholl</span> @ <span class="date">20:16</span>
         </div>
-        <div class="attachment">
-            <img src="http://pandaznaet.ru/wp-content/uploads/2016/01/polskij-pamyatnik-pohozh-na-Darta-Vejdera-1.jpg" alt="">
+        <div class="message">
+            Jestem hardkorem!
         </div>
         <div style="clear: both;"></div>
     </div>
@@ -152,10 +155,11 @@
     
 <div id="chat-panel">
     <form id="chat-input-form">
-        <button class="chat-input-emoticons" onclick="return false;">
-            :)
+        <input type="text" id="chat-input" autocomplete="off" placeholder="Napisz coś...">
+        <button id="submit-message" onclick="return false;">
+            <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
         </button>
-        <input type="text" id="chat-input" autocomplete="off">
+        
         <input type="submit" id="chat-input-submit" value="Wyślij" onclick="return false;">
     </form>
 </div>

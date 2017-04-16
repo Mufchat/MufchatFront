@@ -1,5 +1,17 @@
+$(document).ready(function(){
+    toggleStyles();
+    $(document).on('swiperight',function(){
+        $('#panel').addClass('active-panel');
+        $('#mobile-menu-toggle').addClass('mobile-menu-close');
+    });
+    $(document).on('swipeleft',function(){
+        $('#panel').removeClass('active-panel'); 
+        $('#mobile-menu-toggle').removeClass('mobile-menu-close');
+    });
+});
+
 $('#theme-switcher').change(function() {
-    $('body').toggleClass("light");
+    toggleStyles();
 });
 
 
@@ -11,8 +23,14 @@ $('#send-file').bind("click" , function () {
     $('#send-file-core').click();
 });
 
-$('#chat-input-submit').click(function(){
+$('#submit-message').click(function(){
     sendMessage();
+    document.getElementById('chat-input').focus();
+});
+
+$('#mobile-menu-toggle').click(function() {
+    $('#panel').toggleClass('active-panel');
+    $(this).toggleClass('mobile-menu-close');
 });
 
 $(function () {
@@ -32,5 +50,13 @@ function sendMessage() {
 }
 
 function jumpToPageBottom() {
-    $('html, body').scrollTop( $(document).height() - $(window).height() );
+    $('html, body').animate({ scrollTop: $(document).height() - $(window).height() }, 100);
 }
+
+function toggleStyles() {
+    if(document.getElementById('theme-checkbox').checked) {
+        $('#light-theme').prop('disabled', true);
+    } else {
+        $('#light-theme').prop('disabled', false);
+    }
+};

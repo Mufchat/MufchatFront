@@ -1,0 +1,72 @@
+body {
+    background-color: #fff;
+}
+
+.panel {
+    background-color: #4b66ff;
+}
+
+.mobile-menu {
+    background-color: #4b66ff;
+    border: none;
+}
+
+#greeting {
+    background-color: #4b66ff;
+    color: #ebebeb;
+}
+
+.outstand {
+    color: white;
+}
+
+.list-title {
+    color: #e0e0e0;
+}
+
+ul > li {
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+ul > li:hover {
+    background-color: rgba(255, 255, 255, 0.21);
+}
+
+.inactive {
+    opacity: 0.5;
+}
+
+.details {
+    color: rgba(0, 0, 0, 0.73);
+}
+
+.message {
+    background-color: #efefef;
+}
+
+.sendby-user .message {
+    background-color: #4b66ff;
+    color: #fff;
+}
+
+#chat-panel {
+    background-color: #fff;
+    border: none;
+}
+
+#chat-input {
+    color: #0a0a0e;
+    border-color: #e2e2e2;
+}
+
+#mobile-menu-toggle,
+#mobile-menu-toggle:after,
+#mobile-menu-toggle:before {
+    background-color: #fff;
+}
+
+#submit-message {
+    background-color: #4b66ff;
+    color: #fff;
+}
